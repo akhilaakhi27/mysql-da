@@ -1,0 +1,30 @@
+create database db;
+drop database db;
+create database db1;
+create database db2;
+show databases;
+use db1;
+
+create table persons(
+id int,
+firstname varchar(255),
+address varchar(255) );
+
+insert into persons values(1,"Anu","mannar");
+insert into persons values(2,"Akhi","kzy");
+insert into persons values(3,"saheena","pta");
+insert into persons values(4,"nithin","ktm");
+
+insert into persons(id,firstname,address)
+values(5,"aashima","kottaym"),
+(6,"athulliya","adoor");
+
+select * from persons;
+
+alter table persons rename column id to personid;
+
+alter table persons modify column personid float;
+insert into persons values(6.5,"nayana","kollam");
+
+select distinct address from persons;
+select * from persons where address="kzy";
