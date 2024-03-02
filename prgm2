@@ -1,0 +1,25 @@
+create table Students(
+id int,
+studentname varchar(30),
+age int,
+mark int );
+
+insert into Students values(1,"Akash",24,60);
+insert into Students values(2,"Akhila",25,75);
+insert into Students values(3,"Sangeetha",23,62);
+insert into Students values(4,"Anu",26,70);
+insert into Students values(5,"Sandra",21,65);
+
+select * from Students where age>25;
+select * from Students where mark between 50 and 70;
+select * from Students where studentname like "%a";
+select studentname ,age,mark from Students order by studentname desc ;
+select studentname ,age,mark from Students order by studentname asc ;
+select * from Students where age=24 and studentname like "a%";
+select * from Students where age=30 or studentname like "a%";
+
+update Students set age=27,studentname="Akshaya" where id=1;
+select * from Students;
+
+delete from Students where id=5;
+truncate table persons;
