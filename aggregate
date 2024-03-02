@@ -19,3 +19,8 @@ select avg(amount) from customers;
 #Scalar functions
 select upper(cname)from customers;
 select lower(cname) from customers;
+
+DDL-create,alter,truncate
+DML-SELECT,INSERT,UPDATE,DELETE
+DCL-GRANT,REVOKE
+TCL-
