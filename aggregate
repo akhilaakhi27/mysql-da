@@ -3,3 +3,14 @@ id int,
 cname varchar(30),
 product varchar(50),
 amount int)
+
+insert into customers values(1,"Akshay","fridge",15000);
+insert into customers values(2,"Ammu","tv",20000);
+insert into customers values(3,"Gopika","washing machine",17000);
+insert into customers values(4,"Anu","ac",15000);
+
+select min(amount) from customers;
+select max(amount) from customers;
+select count(product) from customers where amount >15000;
+select sum(amount) from customers;
+select avg(amount) from customers;
