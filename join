@@ -1,0 +1,22 @@
+create database new;
+use new;
+create table staff1(id int ,staff_name varchar(50),staff_age int,staff_address varchar(100), monthly_package int);
+insert into staff1 values(1,"Akash",25,"abcd",25000);
+insert into staff1 values(2,"Anu",24,"bcde",30000);
+insert into staff1 values(3,"Akhila",24,"cdef",28000);
+insert into staff1 values(4,"Sandra",23,"defg",20000);
+
+
+
+create table payment1(payment_id int,type varchar(50),staff_id int,amount int);
+insert into payment1 values(1234,"Card",2,30000);
+insert into payment1 values(2345,"Card",3,28000);
+insert into payment1 values(2345,"Card",5,28000);
+insert into payment1 values(2345,"Card",6,26000);
+
+drop table payment1;
+
+
+select id,staff_name,staff_age,amount from staff1 inner join payment1 on staff1.id=payment1.staff_id;
+select id,staff_name,staff_age,amount from staff1 left outer join payment1 on staff1.id=payment1.staff_id;
+select id,staff_name,staff_age,amount from staff1 right outer join payment1 on staff1.id=payment1.staff_id;
